@@ -6,6 +6,7 @@ group:
     repos: |
       bakito/gws
       bakito/adguardhome-sync
+      bakito/toolbox
 
   # golangci-lint
   - files:
@@ -13,6 +14,7 @@ group:
         dest: .golangci.yaml
     repos: |
       bakito/gws
+      bakito/toolbox
 
   # golangci-lint without depguard
   - files:
