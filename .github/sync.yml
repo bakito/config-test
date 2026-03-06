@@ -1,0 +1,3 @@
+bakito/config:
+  - source: .golangci.yaml
+    dest: .golangci.yaml
