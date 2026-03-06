@@ -1,3 +1,11 @@
-bakito/config@main:
-  - source: .golangci.yaml
-    dest: .golangci.yaml
+group:
+  # .golangci.yaml
+  - files:
+      - source: .golangci.yaml
+        dest: .golangci.yaml
+        template:
+          user:
+            name: 'Maxi'
+            handle: '@BetaHuhn'
+    repos: |
+      bakito/config
