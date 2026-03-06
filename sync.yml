@@ -1,11 +1,9 @@
 group:
-  # .golangci.yaml
+  # go projects
   - files:
       - source: .golangci.yaml
         dest: .golangci.yaml
-        template:
-          user:
-            name: 'Maxi'
-            handle: '@BetaHuhn'
+      - source: workflow/govulncheck.yaml
+        dest: ..github/workflows/govulncheck.yaml
     repos: |
       bakito/gws
