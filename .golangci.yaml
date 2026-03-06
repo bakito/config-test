@@ -1,5 +1,4 @@
 version: '2'
-
 linters:
   enable:
     - asciicheck
@@ -211,13 +210,12 @@ formatters:
       sections:
         - standard
         - default
-        - prefix(github.com/bakito/adguardhome-sync)
-    gofumpt:
-      module-path: github.com/bakito/adguardhome-sync
-      extra-rules: true
-    goimports:
-      local-prefixes:
-        - github.com/bakito/adguardhome-sync
+        - prefix(github.com/bakito)
+        - blank
+        - dot
+      custom-order: true
+    gofmt:
+      simplify: true
     golines:
       max-len: *lineLength
       tab-len: 4
