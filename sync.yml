@@ -17,7 +17,6 @@ group:
     repos: |
       bakito/emoji
       bakito/gws
-      bakito/toolbox
       bakito/volumio-tui
 
   # golangci-lint without depguard
@@ -26,3 +25,4 @@ group:
         dest: .golangci.yaml
     repos: |
       bakito/adguardhome-sync
+      bakito/toolbox
