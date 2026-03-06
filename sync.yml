@@ -7,6 +7,7 @@ group:
       bakito/gws
       bakito/adguardhome-sync
       bakito/toolbox
+      bakito/volumio-tui
 
   # golangci-lint
   - files:
@@ -15,6 +16,7 @@ group:
     repos: |
       bakito/gws
       bakito/toolbox
+      bakito/volumio-tui
 
   # golangci-lint without depguard
   - files:
