@@ -109,11 +109,11 @@ linters:
           files:
             - $test
           deny:
-            - pkg: github.com/stretchr/testify
-              desc: See https://go.dev/wiki/TestComments#assert-libraries
             - pkg: github.com/onsi/ginkgo
               desc: See https://go.dev/wiki/TestComments#assert-libraries
             - pkg: github.com/onsi/gomega
+              desc: See https://go.dev/wiki/TestComments#assert-libraries
+            - pkg: github.com/stretchr/testify
               desc: See https://go.dev/wiki/TestComments#assert-libraries
     gocritic:
       enable-all: true
@@ -124,10 +124,10 @@ linters:
         - unnamedResult
         - whyNoLint
     govet:
+      enable-all: true
       disable:
         - fieldalignment
         - shadow
-      enable-all: true
     misspell:
       locale: US
     revive:
@@ -142,11 +142,13 @@ linters:
         - name: deep-exit
           disabled: true
         - name: dot-imports
-          severity: warning
           disabled: false
+          severity: warning
           exclude: [""]
           arguments:
             - allowedPackages: ["github.com/onsi/ginkgo/v2", "github.com/onsi/gomega"]
+        - name: enforce-switch-style
+          disabled: true
         - name: exported
           disabled: true
         - name: filename-format
@@ -161,21 +163,19 @@ linters:
         - name: import-shadowing
           disabled: true
         - name: line-length-limit
-          disabled: true
+          disabled: false
           arguments:
             - &lineLength 128
         - name: max-public-structs
           disabled: true
         - name: package-comments
           disabled: true
-        - name: var-naming
-          disabled: true
-        - name: enforce-switch-style
-          disabled: true
         - name: unhandled-error
           arguments:
             - '^fmt\.(Fp|P)?rint(f|ln)?$'
             - '^(bytes\.Buffer|string\.Writer|strings\.Builder)\.Write(Byte|Rune|String)?$'
+        - name: var-naming
+          disabled: true
     staticcheck:
       checks:
         - 'all'
@@ -194,11 +194,11 @@ linters:
           - forbidigo
         path: ^internal/cmds/
       - linters:
-          - forcetypeassert
-        path: _test\.go$
-      - linters:
           - forbidigo
         path: assets/scripts/generate-commit.go
+      - linters:
+          - forcetypeassert
+        path: _test\.go$
 formatters:
   enable:
     - gci
@@ -208,13 +208,13 @@ formatters:
     - golines
   settings:
     gci:
+      custom-order: true
       sections:
         - standard
         - default
         - prefix(github.com/bakito)
         - blank
         - dot
-      custom-order: true
     gofmt:
       simplify: true
     golines:
