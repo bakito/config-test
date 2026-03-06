@@ -4,6 +4,6 @@ group:
       - source: .golangci.yaml
         dest: .golangci.yaml
       - source: workflow/govulncheck.yaml
-        dest: ..github/workflows/govulncheck.yaml
+        dest: .github/workflows/govulncheck.yaml
     repos: |
       bakito/gws
