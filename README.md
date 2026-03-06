@@ -2,3 +2,11 @@
 
 Action: https://github.com/BetaHuhn/repo-file-sync-action
 Samples: https://github.com/BetaHuhn/github-files
+
+## Personal Access Token
+
+https://github.com/settings/tokens
+
+| Name         | Scopes         |
+|--------------|----------------|
+| github-files | repo, workflow |
