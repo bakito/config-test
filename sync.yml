@@ -28,6 +28,7 @@ group:
         dest: .golangci.yaml
     repos: |
       bakito/adguardhome-sync
+      bakito/kubexporter
       bakito/toolbox
       bakito/vault-unsealer
   # Funding
