@@ -18,6 +18,7 @@ group:
       - source: golangci-lint/default.yaml
         dest: .golangci.yaml
     repos: |
+      bakito/adguardhome-sync
       bakito/emoji
       bakito/gws
       bakito/kubexporter
@@ -28,7 +29,6 @@ group:
       - source: golangci-lint/without-depguard.yaml
         dest: .golangci.yaml
     repos: |
-      bakito/adguardhome-sync
       bakito/toolbox
       bakito/vault-unsealer
   # Funding
