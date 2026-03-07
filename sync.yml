@@ -20,6 +20,7 @@ group:
     repos: |
       bakito/emoji
       bakito/gws
+      bakito/kubexporter
       bakito/volumio-tui
 
   # golangci-lint without depguard
@@ -28,7 +29,6 @@ group:
         dest: .golangci.yaml
     repos: |
       bakito/adguardhome-sync
-      bakito/kubexporter
       bakito/toolbox
       bakito/vault-unsealer
   # Funding
