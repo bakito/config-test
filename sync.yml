@@ -34,3 +34,4 @@ group:
         dest: .github/FUNDING.yml
     repos: |
       bakito/adguardhome-sync
+      bakito/sealed-secrets-web
